@@ -4,15 +4,18 @@ public class GHappy {
 
     public boolean gHappy(String str) {
         assert str!=null;
-        for(int i = 0; i < str.length(); i++) {
+        boolean result = false;
+        for(int i = 0; i < str.length() - 1; i++) {
             if(str.charAt(i) == 'g') {
-                if (i >= 0 && str.charAt(i-1) == 'g') { continue; }
-                if (i+1 < str.length() && str.charAt(i+1) == 'g') { continue; }
-                return false;
+                if (str.charAt(i+1) == 'g') {
+                    result = true;
+                    i++;
+                }
+
+                else return false;
             }
         }
 
-        return true;
-
+        return result;
     }
 }
