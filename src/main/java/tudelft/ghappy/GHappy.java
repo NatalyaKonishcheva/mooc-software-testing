@@ -10,9 +10,7 @@ public class GHappy {
                 if (str.charAt(i+1) == 'g') {
                     result = true;
                     i++;
-                }
-
-                else return false;
+                } else return false;
             }
         }
 

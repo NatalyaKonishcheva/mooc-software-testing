@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class ChocolateBagsTest3 {
     @ParameterizedTest(name = "{0}: ({1}, {2}, {3}) = {4}")
-    @CsvSource({
+        @CsvSource({
             // The total is higher than the amount of small and big bars.
             "'total-higher',1,1,5,0", "'total-higher',1,1,6,1", "'total-higher',1,1,7,-1", "'total-higher',1,1,8,-1",
             // No need for small bars.
